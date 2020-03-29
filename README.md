@@ -1,4 +1,5 @@
 # docker_couchdb_ext
+![Docker couchdb_ext CI build](https://github.com/peter279k/docker_couchdb_ext/workflows/Docker%20couchdb_ext%20CI%20build/badge.svg?branch=master)
 
 ## Introduction
 
@@ -25,4 +26,19 @@ docker pull peter279k/dokcer_couchdb_ext73:latest
 
 # Download couchDB extension with PHP 7.4
 docker pull peter279k/dokcer_couchdb_ext74:latest
+```
+
+## Docker image build
+
+Of course, it also allows to let developers build Docker image manually:
+
+```BASH
+# Build couchDB extension with PHP 7.2
+docker build -f Dockerfile72 -t dokcer_couchdb_ext72 .
+
+# Build couchDB extension with PHP 7.3
+docker build -f Dockerfile73 -t dokcer_couchdb_ext73 .
+
+# Build couchDB extension with PHP 7.4
+docker build -f Dockerfile73 -t dokcer_couchdb_ext74 .
 ```
