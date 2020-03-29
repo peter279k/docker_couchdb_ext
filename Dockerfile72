@@ -1,0 +1,23 @@
+FROM ubuntu:18.04
+
+LABEL maintainer="Lochemem Bruno Michael <lochbm@gmail.com>,Chun-Sheng, Li <peter279k@gmail.com>"
+
+RUN apt-get update
+RUN apt-get install -y software-properties-common
+
+RUN echo "deb http://ppa.launchpad.net/ondrej/php/ubuntu bionic main" >> /etc/apt/sources.list
+RUN echo "deb-src http://ppa.launchpad.net/ondrej/php/ubuntu bionic main" >> /etc/apt/sources.list
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 14AA40EC0831756756D7F66C4F4EA0AAE5267A6C
+
+RUN apt-get update
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y curl git php7.2-cli php7.2-curl php7.2-json php7.2-dev
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y libcurl4-openssl-dev
+
+RUN git clone https://github.com/ace411/couchdb_ext.git /usr/local/src/couchdb_ext && \
+    cd /usr/local/src/couchdb_ext && \
+    phpize && ./configure --enable-couchdb_ext CFLAGS="-lcurl -lpthread" && \
+    make && make install && \
+    echo extension=couchdb_ext > /etc/php/7.2/cli/conf.d/couchdb_ext.ini && \
+    rm -rf /usr/local/src/couchdb_ext
+
+ENTRYPOINT [ "bash" ]
