@@ -16,33 +16,33 @@ jobs:
       - uses: actions/checkout@v1
       - name: Docker login
         run: docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASSWORD }}
-      - name: Build Docker dokcer_couchdb_ext72 image
-        run: docker build -f Dockerfile72 -t dokcer_couchdb_ext72 .
-      - name: Tags dokcer_couchdb_ext72
+      - name: Build Docker docker_couchdb_ext72 image
+        run: docker build -f Dockerfile72 -t docker_couchdb_ext72 .
+      - name: Tags docker_couchdb_ext72
         run: |
-          docker tag dokcer_couchdb_ext72 ${{ secrets.DOCKER_USER }}/dokcer_couchdb_ext72:${{ github.sha }}
-          docker tag dokcer_couchdb_ext72 ${{ secrets.DOCKER_USER }}/dokcer_couchdb_ext72:latest
-      - name: Push Docker dokcer_couchdb_ext72 image
+          docker tag docker_couchdb_ext72 ${{ secrets.DOCKER_USER }}/docker_couchdb_ext72:${{ github.sha }}
+          docker tag docker_couchdb_ext72 ${{ secrets.DOCKER_USER }}/docker_couchdb_ext72:latest
+      - name: Push Docker docker_couchdb_ext72 image
         run: |
-          docker push ${{ secrets.DOCKER_USER }}/dokcer_couchdb_ext72:${{ github.sha }}
-          docker push ${{ secrets.DOCKER_USER }}/dokcer_couchdb_ext72:latest
-      - name: Build Docker dokcer_couchdb_ext73 image
-        run: docker build -f Dockerfile73 -t dokcer_couchdb_ext73 .
-      - name: Tags dokcer_couchdb_ext73
+          docker push ${{ secrets.DOCKER_USER }}/docker_couchdb_ext72:${{ github.sha }}
+          docker push ${{ secrets.DOCKER_USER }}/docker_couchdb_ext72:latest
+      - name: Build Docker docker_couchdb_ext73 image
+        run: docker build -f Dockerfile73 -t docker_couchdb_ext73 .
+      - name: Tags docker_couchdb_ext73
         run: |
-          docker tag dokcer_couchdb_ext73 ${{ secrets.DOCKER_USER }}/dokcer_couchdb_ext73:${{ github.sha }}
-          docker tag dokcer_couchdb_ext73 ${{ secrets.DOCKER_USER }}/dokcer_couchdb_ext73:latest
-      - name: Push Docker dokcer_couchdb_ext73 image
+          docker tag docker_couchdb_ext73 ${{ secrets.DOCKER_USER }}/docker_couchdb_ext73:${{ github.sha }}
+          docker tag docker_couchdb_ext73 ${{ secrets.DOCKER_USER }}/docker_couchdb_ext73:latest
+      - name: Push Docker docker_couchdb_ext73 image
         run: |
-          docker push ${{ secrets.DOCKER_USER }}/dokcer_couchdb_ext73:${{ github.sha }}
-          docker push ${{ secrets.DOCKER_USER }}/dokcer_couchdb_ext73:latest
-      - name: Build Docker dokcer_couchdb_ext74 image
-        run: docker build -f Dockerfile74 -t dokcer_couchdb_ext74 .
-      - name: Tags dokcer_couchdb_ext74
+          docker push ${{ secrets.DOCKER_USER }}/docker_couchdb_ext73:${{ github.sha }}
+          docker push ${{ secrets.DOCKER_USER }}/docker_couchdb_ext73:latest
+      - name: Build Docker docker_couchdb_ext74 image
+        run: docker build -f Dockerfile74 -t docker_couchdb_ext74 .
+      - name: Tags docker_couchdb_ext74
         run: |
-          docker tag dokcer_couchdb_ext74 ${{ secrets.DOCKER_USER }}/dokcer_couchdb_ext74:${{ github.sha }}
-          docker tag dokcer_couchdb_ext74 ${{ secrets.DOCKER_USER }}/dokcer_couchdb_ext74:latest
-      - name: Push Docker dokcer_couchdb_ext74 image
+          docker tag docker_couchdb_ext74 ${{ secrets.DOCKER_USER }}/docker_couchdb_ext74:${{ github.sha }}
+          docker tag docker_couchdb_ext74 ${{ secrets.DOCKER_USER }}/docker_couchdb_ext74:latest
+      - name: Push Docker docker_couchdb_ext74 image
         run: |
-          docker push ${{ secrets.DOCKER_USER }}/dokcer_couchdb_ext74:${{ github.sha }}
-          docker push ${{ secrets.DOCKER_USER }}/dokcer_couchdb_ext74:latest
+          docker push ${{ secrets.DOCKER_USER }}/docker_couchdb_ext74:${{ github.sha }}
+          docker push ${{ secrets.DOCKER_USER }}/docker_couchdb_ext74:latest
