@@ -15,7 +15,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y libcurl4-openssl-dev
 
 RUN git clone https://github.com/ace411/couchdb_ext.git /usr/local/src/couchdb_ext && \
     cd /usr/local/src/couchdb_ext && \
-    phpize && ./configure --enable-couchdb_ext CFLAGS="-lcurl -lpthread" && \
+    phpize && ./configure --enable-couchdb_ext && \
     make && make install && \
     echo extension=couchdb_ext > /etc/php/7.2/cli/conf.d/couchdb_ext.ini && \
     rm -rf /usr/local/src/couchdb_ext
