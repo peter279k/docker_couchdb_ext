@@ -9,11 +9,11 @@ This is the Docker image build environment for PHP with [couchdb_ext repository]
 
 The Docker image has been published on Docker hub.
 
-These repositories are as follows:
+These Docker image registries are as follows:
 
-- [docker_couchdb_ext72](https://hub.docker.com/repository/docker/peter279k/docker_couchdb_ext72)
-- [docker_couchdb_ext73](https://hub.docker.com/repository/docker/peter279k/docker_couchdb_ext73)
-- [docker_couchdb_ext74](https://hub.docker.com/repository/docker/peter279k/docker_couchdb_ext74)
+- [docker_couchdb_ext72](https://hub.docker.com/r/peter279k/docker_couchdb_ext72)
+- [docker_couchdb_ext73](https://hub.docker.com/r/peter279k/docker_couchdb_ext73)
+- [docker_couchdb_ext74](https://hub.docker.com/r/peter279k/docker_couchdb_ext74)
 
 It can use following command to download Docker image.
 
